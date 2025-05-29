@@ -1,13 +1,13 @@
 import { inject, injectable } from "inversify";
 import { IUserService } from "./user.service.interface";
-import TYPES from "../inversify/types";
-import { IUserRepository } from "../repositories/user.repository.interface";
-import { IUser } from "../models/user.model";
-import { ConflictError } from "../errors/ConflictError";
+import TYPES from "@/inversify/types";
+import { IUserRepository } from "@/repositories/user.repository.interface";
+import { IUser } from "@/models/user.model";
+import { ConflictError } from "@/errors/ConflictError";
 import bcrypt from "bcryptjs";
-import { UnauthorizedError } from "../errors/UnauthorizedError";
-import { JwtUtil, TokenPayload } from "../utils/jwt";
-import { redisClient } from "../utils/redisClient";
+import { UnauthorizedError } from "@/errors/UnauthorizedError";
+import { JwtUtil, TokenPayload } from "@/utils/jwt";
+import { redisClient } from "@/utils/redisClient";
 
 @injectable()
 export class UserService implements IUserService {

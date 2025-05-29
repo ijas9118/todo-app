@@ -1,12 +1,13 @@
-import { inject } from "inversify";
-import TYPES from "../inversify/types";
-import { IUserService } from "../services/user.service.interface";
+import { inject, injectable } from "inversify";
 import { IAuthController } from "./auth.controller.interface";
-import asyncHandler from "../middlewares/asyncHandler";
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { UnauthorizedError } from "../errors/UnauthorizedError";
+import asyncHandler from "@/middlewares/asyncHandler";
+import { IUserService } from "@/services/user.service.interface";
+import { UnauthorizedError } from "@/errors/UnauthorizedError";
+import TYPES from "@/inversify/types";
 
+@injectable()
 export class AuthController implements IAuthController {
   constructor(@inject(TYPES.UserService) private userService: IUserService) {}
 

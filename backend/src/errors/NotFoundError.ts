@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import { MESSAGES } from "../constants/messages";
+import { MESSAGES } from "@/constants/messages";
 import { AppError } from "./AppError";
 
 export class NotFoundError extends AppError {

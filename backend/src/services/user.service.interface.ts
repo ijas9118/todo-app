@@ -1,4 +1,4 @@
-import { IUser } from "../models/user.model";
+import { IUser } from "@/models/user.model";
 
 export interface IUserService {
   register(name: string, email: string, password: string): Promise<IUser>;

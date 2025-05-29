@@ -4,7 +4,6 @@ import { StatusCodes } from "http-status-codes";
 import { MESSAGES } from "./constants/messages";
 import { NotFoundError } from "./errors/NotFoundError";
 import authRoutes from "./routes/auth.routes";
-import logger from "./utils/logger";
 import { httpLogger } from "./middlewares/httpLogger";
 
 const app = express();

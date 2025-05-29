@@ -1,9 +1,8 @@
 import { Router } from "express";
-import { AuthController } from "../controller/auth.controller";
-import container from "../inversify/container";
-import TYPES from "../inversify/types";
-import { authenticate } from "../middlewares/auth.middleware";
-import { IAuthController } from "../controller/auth.controller.interface";
+import container from "@/inversify/container";
+import TYPES from "@/inversify/types";
+import { authenticate } from "@/middlewares/auth.middleware";
+import { IAuthController } from "@/controller/auth.controller.interface";
 
 const router = Router();
 

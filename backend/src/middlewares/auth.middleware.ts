@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { UnauthorizedError } from "../errors/UnauthorizedError";
-import { JwtUtil, TokenPayload } from "../utils/jwt";
+import { UnauthorizedError } from "@/errors/UnauthorizedError";
+import { JwtUtil, TokenPayload } from "@/utils/jwt";
 
 declare module "express-serve-static-core" {
   interface Request {
