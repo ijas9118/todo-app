@@ -3,11 +3,14 @@ import http from "http";
 import app from "./app";
 import logger from "./utils/logger";
 import { connectRedis } from "./utils/redisClient";
+import { env } from "./config/env";
+import { connectToDatabase } from "./config/database";
 
-const PORT = process.env.PORT || 3000;
+const PORT = env.PORT || 3000;
 
 (async () => {
   try {
+    await connectToDatabase();
     await connectRedis();
 
     const server = http.createServer(app);
